@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Developer Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-jQbq0a6s1Z1b6..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="portfolio.css">
+
+  <meta name="description" content="A modern developer portfolio — projects, achievements, and contact." />
+  <meta name="theme-color" content="#ffffff" />
+
+  <script defer src="portfolio.js"></script>
+</head>
+<body class="light">
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="brand"><div class="logo">D</div><span class="brand-name">Developer</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" data-link>Home</a></li>
+        <li><a href="#achievements" data-link>Learning Path</a></li>
+        <li><a href="#projects" data-link>Projects</a></li>
+        <li><a href="#contact" data-link>Contact</a></li>
+      </ul>
+
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+        <button id="menuToggle" class="icon-btn mobile-only" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <div class="logo-large">D</div>
+        <h1 class="hero-title">Hello — I'm <span class="name">a Coder</span></h1>
+        <p class="hero-sub">I build interactive things and solve problems. <span id="typed" class="typed"></span></p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">My Projects</a>
+          <a class="btn outline" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-card card glass">
+          <img src="easy.jpg" alt="Profile" class="profile-img lazy" />
+          <div class="profile-meta">
+            <h3>Developer</h3>
+            <p>Python • HTML • CSS • JavaScript</p>
+            <div class="skill-chips">
+              <span>Web</span><span>Games</span><span>Automation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#projects" class="scroll-hint" aria-hidden><i class="fa-solid fa-arrow-down"></i></a>
+  </section>
+
+  <section id="achievements" class="achievements container section">
+    <header class="section-head">
+      <h2>My Learning Path</h2>
+      <p>Courses and milestones from my coding journey so far.</p>
+    </header>
+
+    <div class="grid reveal-grid">
+      <article class="card reveal">
+        <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+        <span class="badge">Certification</span>
+        <h3>Python Basics</h3>
+        <p>Interactive Python course with hands-on projects.</p>
+        <small>January 2024</small>
+      </article>
+
+      <article class="card reveal">
+        <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <span class="badge">Milestone</span>
+        <h3>First Website</h3>
+        <p>Built a responsive site using HTML, CSS & JS.</p>
+        <small>March 2020</small>
+      </article>
+
+      <article class="card reveal">
+        <div class="icon"><i class="fa-solid fa-gamepad"></i></div>
+        <span class="badge">Project</span>
+        <h3>BMI App</h3>
+        <p>Built a responsive app which uses your given data to calculate your BMI and give you specific instructions for you health.</p>
+        <small>May 2021</small>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects" class="projects section">
+    <div class="container">
+      <header class="section-head">
+        <h2>Projects</h2>
+        <p>Filterable gallery — click a tag to focus the work you want to show.</p>
+      </header>
+
+      <div class="project-controls">
+        <div class="filters" role="tablist" aria-label="Project filters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="HTML">HTML</button>
+          <button class="chip" data-filter="Python">Python</button>
+          <button class="chip" data-filter="Game">Game</button>
+        </div>
+        <input id="projectSearch" class="search" placeholder="Search project title..." />
+      </div>
+
+      <div id="projectGrid" class="grid project-grid">
+        <article class="project card reveal" data-tech="HTML,CSS,JS" data-title="Portfolio Website">
+          <img data-src="https://via.placeholder.com/600x320" alt="Portfolio snapshot" class="lazy" loading="lazy" />
+          <h3>Portfolio Website</h3>
+          <p>Personal portfolio built with HTML, CSS & JS.</p>
+          <div class="project-meta">
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="links">
+              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card reveal" data-tech="Python,Game" data-title="Snake Game">
+          <img data-src="https://via.placeholder.com/600x320" alt="Snake game" class="lazy" loading="lazy" />
+          <h3>Snake Game</h3>
+          <p>Classic snake recreated using Pygame. Playable locally.</p>
+          <div class="project-meta">
+            <div class="tags"><span>Python</span><span>Pygame</span></div>
+            <div class="links">
+              <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more projects here -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section container">
+    <header class="section-head">
+      <h2>Get in Touch</h2>
+      <p>I'm open to opportunities and collaborations. Let's connect.</p>
+    </header>
+
+    <div class="contact-grid">
+      <div class="info card glass reveal">
+        <h3>Contact Info</h3>
+        <div class="info-item"><i class="fa-solid fa-envelope"></i> your.email@example.com</div>
+        <div class="info-item"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</div>
+        <div class="info-item"><i class="fa-solid fa-location-dot"></i> San Francisco, CA</div>
+
+        <div class="socials">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <form id="contactForm" class="card reveal" novalidate>
+        <label>
+          <input type="text" id="name" placeholder="Your Name" required />
+        </label>
+        <label>
+          <input type="email" id="email" placeholder="Your Email" required />
+        </label>
+        <label>
+          <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary"><i class="fa-solid fa-paper-plane"></i> Send</button>
+          <button type="reset" class="btn outline">Reset</button>
+        </div>
+
+        <div id="formStatus" class="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Developer Portfolio. Crafted with care.</p>
+      <button id="topBtn" class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close"><i class="fa-solid fa-x"></i></button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+</body>
+</html>
